@@ -34,11 +34,11 @@
     </bean>
 
     <mvc:interceptors>
-        <mvc:interceptor>
-            <mvc:mapping path="/**"/>
-            <bean
-                    class="com.keer.job.admin.controller.interceptor.PermissionInterceptor"/>
-        </mvc:interceptor>
+        <!--<mvc:interceptor>-->
+            <!--<mvc:mapping path="/**"/>-->
+            <!--<bean-->
+                    <!--class="com.keer.job.admin.controller.interceptor.PermissionInterceptor"/>-->
+        <!--</mvc:interceptor>-->
         <mvc:interceptor>
             <mvc:mapping path="/**"/>
             <bean
