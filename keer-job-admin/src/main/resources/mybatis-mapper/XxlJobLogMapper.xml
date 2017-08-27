@@ -47,4 +47,14 @@
             </if>
         </trim>
     </select>
+
+    <select id="triggerCountByDay" resultType="java.util.Map">
+        select date_format(trigger_time,'%Y-%m-%d') triggerDay,count(id)
+        triggerCount from xxl_job_qrtz_trigger_log
+        where trigger_time between #{from} and #{to}
+        <if test="handleCode gt 0">
+            and handle_code = #{handleCode}
+        </if>
+        group by triggerDay
+    </select>
 </mapper>
