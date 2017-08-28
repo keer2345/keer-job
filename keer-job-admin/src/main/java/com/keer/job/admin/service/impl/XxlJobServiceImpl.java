@@ -53,12 +53,15 @@ public class XxlJobServiceImpl implements XxlJobService {
         return dashboardMap;
     }
 
-    public ReturnT<Map<String, Object>> triggerCharDate() {
+    public ReturnT<Map<String, Object>> triggerChartDate() {
         Date from = DateUtils.addDays(new Date(), -30);
         Date to = new Date();
 
+        //执行日期列表
         List<String> triggerDayList = new ArrayList<String>();
+        //执行成功的日期列表
         List<Integer> triggerDayCountSucList = new ArrayList<Integer>();
+        //执行失败的日期列表
         List<Integer> triggerDayCountFailList = new ArrayList<Integer>();
 
         int triggerCountSucTotal = 0;
