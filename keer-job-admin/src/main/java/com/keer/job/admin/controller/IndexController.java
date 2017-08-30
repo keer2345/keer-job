@@ -84,4 +84,9 @@ public class IndexController {
         }
         return ReturnT.SUCCESS;
     }
+
+    @RequestMapping("/help")
+    public String help() {
+        return "help";
+    }
 }
